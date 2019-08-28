@@ -6,4 +6,11 @@ before_install:
   - docker build -t lukstar/deploy_flow -f Dockerfile.dev .
 
 script:
-  - docker run lukstar/deploy_flow CI=true npm test -- --coverage
+  - docker run -e CI=true lukstar/deploy_flow  npm test -- --coverage
+
+# deploy:
+#   provider: elasticbeanstalk
+#   region: "us-west-2"
+#   app: "docker_flow"
+#   env: "docker_flow_prod"
+#   bucket_name: elasticbeanstalk-us-west-2-323123123123
