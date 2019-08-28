@@ -11,6 +11,12 @@ script:
 # deploy:
 #   provider: elasticbeanstalk
 #   region: "us-west-2"
-#   app: "docker_flow"
-#   env: "docker_flow_prod"
-#   bucket_name: elasticbeanstalk-us-west-2-323123123123
+#   app: "deploy_flow"
+#   env: "deploy_flow_prod"
+#   bucket_name: "elasticbeanstalk-us-west-2-323123123123"
+#   bucket_path: "deploy_flow"
+#   on:
+#     branch: master
+#   access_key_id: "$AWS_ACCESS_KEY"
+#   secret_access_key:
+#     secure: "$AWS_SECRET_KEY"
